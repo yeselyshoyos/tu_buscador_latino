@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div id="app">
+    <h1>Reportes</h1>
+    <p >Por favor digite una palabra</p>
+    <form action="{% url 'create-report' %}" method="POST">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <input type="text" class="form-control" name="word" placeholder="Ejemplo: Futbol">
+            </div>
+            <div class="col-2">
+                <button type="submit" class="btn btn-primary mb-3">Generar</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock content %}
